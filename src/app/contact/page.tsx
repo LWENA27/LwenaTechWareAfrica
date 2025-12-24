@@ -144,8 +144,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#232F3E] mb-1">Email</h3>
-                    <p className="text-gray-600">info@lwenatech.africa</p>
-                    <p className="text-gray-600">support@lwenatech.africa</p>
+                    <p className="text-gray-600">lwenatech@gmail.com</p>
                   </div>
                 </div>
 
@@ -155,7 +154,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#232F3E] mb-1">Phone</h3>
-                    <p className="text-gray-600">+260 XXX XXX XXX</p>
+                    <p className="text-gray-600">+255 683 274 343</p>
                     <p className="text-gray-600">Available 24/7</p>
                   </div>
                 </div>
@@ -166,7 +165,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#232F3E] mb-1">Location</h3>
-                    <p className="text-gray-600">Lusaka, Zambia</p>
+                    <p className="text-gray-600">Dar es Salaam, Tanzania</p>
                     <p className="text-gray-600">Serving clients worldwide</p>
                   </div>
                 </div>

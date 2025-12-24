@@ -138,21 +138,83 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Users className="w-16 h-16 text-[#FF9900] mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-[#232F3E] mb-4">Our Team</h2>
+            <h2 className="text-3xl font-bold text-[#232F3E] mb-4">Meet Our Team</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A diverse group of talented professionals committed to delivering excellence
+              The passionate people behind Lwena TechWareAfrica's success
             </p>
           </div>
           
-          <div className="bg-white p-8 rounded-lg shadow-sm max-w-4xl mx-auto text-center">
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Our team consists of experienced software engineers, designers, project managers, and support specialists 
-              who work together to bring your vision to life. With expertise spanning multiple technologies and industries, 
-              we're equipped to handle projects of any scale.
-            </p>
-            <p className="text-lg font-semibold text-[#232F3E]">
-              Collective Experience: 50+ years in software development
-            </p>
+          {/* Team Members Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+            {/* CEO */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+              <div className="bg-gradient-to-br from-[#232F3E] to-[#FF9900] h-48 flex items-center justify-center">
+                <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                  <Users className="w-16 h-16 text-[#232F3E]" />
+                </div>
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-[#232F3E] mb-1">Lwena</h3>
+                <p className="text-[#FF9900] font-semibold mb-3">CEO & Software Developer</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Founder and lead developer, passionate about building world-class software solutions 
+                  that showcase African innovation on the global stage.
+                </p>
+              </div>
+            </div>
+
+            {/* Placeholder for future team members */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm border-2 border-dashed border-gray-300">
+              <div className="bg-gray-100 h-48 flex items-center justify-center">
+                <div className="text-center text-gray-400">
+                  <Users className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                  <p className="text-sm">Team Member</p>
+                  <p className="text-xs">Coming Soon</p>
+                </div>
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-lg font-semibold text-gray-400 mb-1">Your Name</h3>
+                <p className="text-gray-400 text-sm mb-3">Position Title</p>
+                <p className="text-gray-400 text-sm">Join our growing team</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm border-2 border-dashed border-gray-300">
+              <div className="bg-gray-100 h-48 flex items-center justify-center">
+                <div className="text-center text-gray-400">
+                  <Users className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                  <p className="text-sm">Team Member</p>
+                  <p className="text-xs">Coming Soon</p>
+                </div>
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-lg font-semibold text-gray-400 mb-1">Your Name</h3>
+                <p className="text-gray-400 text-sm mb-3">Position Title</p>
+                <p className="text-gray-400 text-sm">Join our growing team</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Team Stats */}
+          <div className="bg-white p-8 rounded-lg shadow-sm max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-[#FF9900] mb-2">1+</div>
+                <div className="text-sm text-gray-600">Team Members</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-[#FF9900] mb-2">4+</div>
+                <div className="text-sm text-gray-600">Products Built</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-[#FF9900] mb-2">100%</div>
+                <div className="text-sm text-gray-600">Client Satisfaction</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-[#FF9900] mb-2">24/7</div>
+                <div className="text-sm text-gray-600">Support Available</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
