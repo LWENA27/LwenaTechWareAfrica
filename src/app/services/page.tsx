@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { Code, Cloud, Smartphone, Database, Shield, Zap } from 'lucide-react'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -10,36 +11,42 @@ export default function ServicesPage() {
   const services = [
     {
       icon: Code,
+      slug: 'web-development',
       title: 'Custom Software Development',
       description: 'Tailored software solutions built to your exact specifications. From web applications to enterprise systems, we bring your vision to life.',
       features: ['Full-stack development', 'Agile methodology', 'Scalable architecture', 'Clean, maintainable code'],
     },
     {
       icon: Cloud,
+      slug: 'saas-solutions',
       title: 'Cloud Solutions',
       description: 'Cloud-native applications and migration services. We help you leverage the power of cloud computing for maximum efficiency.',
       features: ['AWS/Azure/GCP', 'Cloud migration', 'Serverless architecture', 'DevOps & CI/CD'],
     },
     {
       icon: Smartphone,
+      slug: 'mobile-apps',
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android.',
       features: ['React Native', 'Flutter', 'Native iOS/Android', 'App Store deployment'],
     },
     {
       icon: Database,
+      slug: 'system-integration',
       title: 'Database Design & Optimization',
       description: 'Robust database architecture and performance optimization to ensure your data is secure, accessible, and lightning-fast.',
       features: ['SQL/NoSQL databases', 'Performance tuning', 'Data migration', 'Backup & recovery'],
     },
     {
       icon: Shield,
+      slug: 'security-compliance',
       title: 'Security & Compliance',
       description: 'Enterprise-grade security implementation and compliance consulting to protect your business and customer data.',
       features: ['Security audits', 'GDPR compliance', 'Penetration testing', 'Encryption implementation'],
     },
     {
       icon: Zap,
+      slug: 'api-integration',
       title: 'API Development & Integration',
       description: 'RESTful and GraphQL APIs, third-party integrations, and microservices architecture for seamless system connectivity.',
       features: ['REST/GraphQL APIs', 'Third-party integrations', 'Microservices', 'API documentation'],
@@ -69,7 +76,11 @@ export default function ServicesPage() {
             {services.map((service, index) => {
               const Icon = service.icon
               return (
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow">
+                <Link
+                  key={index}
+                  href={`/services/${service.slug}`}
+                  className="block bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
+                >
                   <div className="w-16 h-16 bg-[#FF9900] rounded-lg flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
@@ -83,7 +94,7 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </Link>
               )
             })}
           </div>

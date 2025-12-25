@@ -20,7 +20,7 @@ export function Hero() {
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="px-4 py-2 bg-secondary/10 text-secondary border border-secondary/20 rounded-full text-sm font-medium">
-                  🚀 Made in Africa, Built for the World
+                  🚀 Together Linking Ideas to Software
                 </span>
               </div>
               
