@@ -125,7 +125,7 @@ export default function RegisterPage() {
 
     try {
       // Import supabase dynamically (client-side only)
-      const { supabase } = await import("@/lib/supabaseClient");
+      const { supabase } = await import("../../../lib/supabaseClient");
 
       console.log("Starting registration process...");
 
