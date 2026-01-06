@@ -137,6 +137,80 @@ export default function InventoryMasterPage() {
         </div>
       </section>
 
+      {/* App Screenshots Gallery */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#232F3E] mb-4">
+              See InventoryMaster in Action
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real screenshots from our multi-platform app - powerful, intuitive, and feature-rich
+            </p>
+          </div>
+
+          <div className="max-w-7xl mx-auto">
+            {/* Featured Screenshot */}
+            <div className="mb-12 flex justify-center">
+              <div className="relative group max-w-4xl">
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
+                  <img 
+                    src="/images/inventory/Screenshot from 2026-01-07 00-05-54.png"
+                    alt="InventoryMaster - Main Dashboard"
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Screenshot Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {[
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-21-56.png", alt: "Product Management" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-22-06.png", alt: "Inventory Dashboard" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-22-15.png", alt: "Stock Levels" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-22-38.png", alt: "Product Details" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-23-07.png", alt: "Sales Tracking" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-23-33.png", alt: "Category Management" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-23-41.png", alt: "User Settings" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-25-15.png", alt: "Multi-tenant View" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-27-48.png", alt: "Reports & Analytics" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 00-31-12.png", alt: "Image Gallery" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 01-00-16.png", alt: "Real-time Sync" },
+                { src: "/images/inventory/Screenshot from 2026-01-07 01-06-25.png", alt: "Offline Support" }
+              ].map((screenshot, index) => (
+                <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <img 
+                    src={screenshot.src}
+                    alt={screenshot.alt}
+                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <p className="text-white text-sm font-semibold">{screenshot.alt}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Below Gallery */}
+            <div className="mt-12 text-center">
+              <a
+                href="https://inventorymaster-saas.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-blue-600 hover:to-indigo-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+              >
+                <Globe className="w-6 h-6" />
+                Try It Free - Experience These Features Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Use Cases Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
