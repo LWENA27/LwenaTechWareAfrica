@@ -275,6 +275,80 @@ export default function smsgetwayProPage() {
         </div>
       </section>
 
+      {/* App Screenshots Gallery */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#232F3E] mb-4">
+              See SMS Gateway Pro in Action
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real screenshots from our mobile app - intuitive, powerful, and easy to use
+            </p>
+          </div>
+
+          <div className="max-w-7xl mx-auto">
+            {/* Featured Screenshot */}
+            <div className="mb-12 flex justify-center">
+              <div className="relative group max-w-md">
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
+                  <img 
+                    src="/images/sms/Screenshot_20260101-101212.jpg"
+                    alt="SMS Gateway Pro - Main Dashboard"
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Screenshot Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {[
+                { src: "/images/sms/Screenshot_20260101-101230.jpg", alt: "Contact Management" },
+                { src: "/images/sms/Screenshot_20260101-101343.jpg", alt: "SMS Composer" },
+                { src: "/images/sms/Screenshot_20260101-101349.jpg", alt: "Group Messaging" },
+                { src: "/images/sms/Screenshot_20260101-101438.jpg", alt: "Message Templates" },
+                { src: "/images/sms/Screenshot_20260101-101446.jpg", alt: "Delivery Reports" },
+                { src: "/images/sms/Screenshot_20260101-101543.jpg", alt: "Settings Panel" },
+                { src: "/images/sms/Screenshot_20260101-101553.jpg", alt: "API Integration" },
+                { src: "/images/sms/Screenshot_20260101-101558.jpg", alt: "Bulk Send" },
+                { src: "/images/sms/Screenshot_20260101-101657.jpg", alt: "Contact Groups" },
+                { src: "/images/sms/Screenshot_20260101-101706.jpg", alt: "Campaign Analytics" },
+                { src: "/images/sms/Screenshot_20260101-101732.jpg", alt: "User Profile" },
+                { src: "/images/sms/Screenshot_20260101-101741.jpg", alt: "Team Management" }
+              ].map((screenshot, index) => (
+                <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <img 
+                    src={screenshot.src}
+                    alt={screenshot.alt}
+                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <p className="text-white text-sm font-semibold">{screenshot.alt}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Below Gallery */}
+            <div className="mt-12 text-center">
+              <a
+                href="https://smsgateway.techwareafrica.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-amber-600 hover:to-orange-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+              >
+                <Zap className="w-6 h-6" />
+                Try It Free - Experience These Features Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Customization Section */}
       {isOfferValid && (
         <section className="py-20 bg-gradient-to-br from-[#232F3E] to-[#1a242e] text-white">

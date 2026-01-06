@@ -22,7 +22,7 @@ export function Footer() {
                  className="text-white/80 hover:text-secondary transition-colors">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/80 hover:text-secondary transition-colors">
+              <a href="https://www.linkedin.com/in/lwena-adam-b55944322/" className="text-white/80 hover:text-secondary transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
               <a href="#" className="text-white/80 hover:text-secondary transition-colors">

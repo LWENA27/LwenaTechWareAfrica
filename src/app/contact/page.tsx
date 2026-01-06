@@ -187,7 +187,7 @@ export default function ContactPage() {
                 <h3 className="font-semibold text-[#232F3E] mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/lwena-adam-b55944322/"
                     className="w-10 h-10 bg-[#232F3E] rounded-lg flex items-center justify-center hover:bg-[#FF9900] transition-colors"
                     aria-label="LinkedIn"
                   >
