@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, CheckCircle2, Download, Globe, Smartphone, Monitor } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, Download, Globe, Smartphone, Monitor, Gift, Clock, Check, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'InventoryMaster SaaS - Multi-Platform Inventory Management',
@@ -9,6 +9,10 @@ export const metadata: Metadata = {
 }
 
 export default function InventoryMasterPage() {
+  // Check if we're still in 2026
+  const currentYear = new Date().getFullYear()
+  const isOfferValid = currentYear === 2026
+
   const features = [
     'Multi-tenant Architecture - Support multiple businesses',
     'Product Management - Complete catalog with up to 5 images per product',
@@ -61,16 +65,65 @@ export default function InventoryMasterPage() {
               supporting Web, Android, Windows, macOS, and Linux platforms.
             </p>
 
+            {/* 3-Month Free Trial Offer Banner */}
+            {isOfferValid ? (
+              <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border-2 border-green-400 rounded-2xl p-6 mb-8 backdrop-blur-sm">
+                <div className="flex items-start gap-4">
+                  <Gift className="w-8 h-8 text-green-400 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold text-green-400 mb-2">🎉 LIMITED TIME OFFER - 2026 ONLY!</h3>
+                    <p className="text-white/90 text-lg">
+                      <strong>Get 3 MONTHS FREE</strong> access to InventoryMaster Pro with ALL features unlocked! 
+                      Plus, submit unlimited customization requests to tailor it to your business needs.
+                    </p>
+                    <p className="text-green-300 text-sm mt-2">
+                      ⏰ This exclusive offer is only available during 2026. Don't miss out!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="bg-red-500/20 border-2 border-red-500 rounded-2xl p-6 mb-8">
+                <div className="flex items-start gap-4">
+                  <Clock className="w-8 h-8 text-red-400 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold text-red-400 mb-2">Offer Expired</h3>
+                    <p className="text-red-300">
+                      ⏰ The 3-month free trial offer was exclusive to 2026 and has now expired. 
+                      Contact us for current pricing and available plans.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <div className="flex flex-wrap gap-4">
-              <Button variant="cta" size="lg" asChild>
-                <a href="https://inventorymaster-saas.netlify.app" target="_blank" rel="noopener noreferrer">
-                  <Globe className="mr-2 h-5 w-5" />
-                  Try Live Demo
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                <Link href="/contact">Get Custom Version</Link>
-              </Button>
+              {isOfferValid ? (
+                <>
+                  <a
+                    href="https://inventory.techwareafrica.tech/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2"
+                  >
+                    <Zap className="w-5 h-5" />
+                    Start FREE 3-Month Trial
+                  </a>
+                  <a
+                    href="#features"
+                    className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/20"
+                  >
+                    Learn More
+                  </a>
+                </>
+              ) : (
+                <Button variant="cta" size="lg" asChild>
+                  <a href="https://inventory.techwareafrica.tech/" target="_blank" rel="noopener noreferrer">
+                    <Globe className="mr-2 h-5 w-5" />
+                    Start Free Trial
+                  </a>
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -198,7 +251,7 @@ export default function InventoryMasterPage() {
             {/* CTA Below Gallery */}
             <div className="mt-12 text-center">
               <a
-                href="https://inventorymaster-saas.netlify.app"
+                href="https://inventory.techwareafrica.tech/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-blue-600 hover:to-indigo-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
@@ -241,23 +294,72 @@ export default function InventoryMasterPage() {
         </div>
       </section>
 
+      {/* Customization Section */}
+      {isOfferValid && (
+        <section className="py-20 bg-gradient-to-br from-[#232F3E] to-[#1a242e] text-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-6">
+                Need Custom Features? We've Got You Covered!
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                During your 3-month free trial, submit unlimited customization requests. We'll tailor InventoryMaster to your exact business needs.
+              </p>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold mb-6">Popular Customization Requests:</h3>
+                <div className="grid md:grid-cols-2 gap-4 text-left">
+                  {[
+                    "Custom reporting dashboards",
+                    "Barcode & QR code integration",
+                    "Multi-location management",
+                    "Advanced user roles & permissions",
+                    "E-commerce platform integration",
+                    "Custom product fields",
+                    "Automated reorder alerts",
+                    "White-label branding"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-10">
+                <a
+                  href="https://inventory.techwareafrica.tech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-blue-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-600 transition-all shadow-xl"
+                >
+                  Start Free Trial & Request Customizations
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">
-              Ready to Streamline Your Inventory?
+              {isOfferValid 
+                ? "Ready to Streamline Your Inventory?"
+                : "Ready to Streamline Your Inventory?"}
             </h2>
             <p className="text-lg text-white/80 mb-8">
-              Start using InventoryMaster today. Contact us for licensing options.
+              {isOfferValid
+                ? "Start your FREE 3-month trial today with all features unlocked and unlimited customization requests!"
+                : "Start using InventoryMaster today. Contact us for licensing options."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
-                <Link href="/contact">Contact Us</Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                <a href="https://github.com/LWENA27/Mem_technology" target="_blank" rel="noopener noreferrer">
-                  View on GitHub
+                <a href="https://inventory.techwareafrica.tech/" target="_blank" rel="noopener noreferrer">
+                  Start Free Trial
                 </a>
               </Button>
             </div>
