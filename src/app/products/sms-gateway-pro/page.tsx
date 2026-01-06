@@ -8,7 +8,7 @@ export const metadata = {
   description: "Professional bulk SMS management platform. Sign up now for 3 months completely FREE throughout 2026 - No credit card required!",
 };
 
-export default function SMSGatewayProPage() {
+export default function smsgetwayProPage() {
   const currentYear = new Date().getFullYear();
   const currentDate = new Date();
   // Offer is valid from now (late 2025) through all of 2026
@@ -96,13 +96,15 @@ export default function SMSGatewayProPage() {
               <div className="flex flex-wrap gap-4">
                 {isOfferValid ? (
                   <>
-                    <Link
-                      href="/register"
+                    <a
+                      href="https://smsgetway.techwareafrica.tech"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2"
                     >
                       <Zap className="w-5 h-5" />
                       Start FREE 3-Month Trial
-                    </Link>
+                    </a>
                     <Link
                       href="#features"
                       className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/20"
@@ -195,14 +197,16 @@ export default function SMSGatewayProPage() {
             </div>
 
             <div className="mt-12 text-center">
-              <Link
-                href="/register"
+              <a
+                href="https://smsgetway.techwareafrica.tech"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-amber-600 hover:to-orange-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 <Gift className="w-6 h-6" />
                 Claim Your Free Trial Now
                 <span className="text-sm font-normal opacity-90">(2026 Only)</span>
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -305,12 +309,14 @@ export default function SMSGatewayProPage() {
               </div>
 
               <div className="mt-10">
-                <Link
-                  href="/register"
+                <a
+                  href="https://smsgetway.techwareafrica.tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-amber-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-amber-600 transition-all shadow-xl"
                 >
                   Start Free Trial & Request Customizations
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -335,13 +341,15 @@ export default function SMSGatewayProPage() {
           <div className="flex flex-wrap gap-4 justify-center">
             {isOfferValid ? (
               <>
-                <Link
-                  href="/register"
+                <a
+                  href="https://smsgetway.techwareafrica.tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-[#232F3E] px-10 py-5 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-xl inline-flex items-center gap-3"
                 >
                   <Gift className="w-6 h-6" />
                   Get Started Free
-                </Link>
+                </a>
                 <Link
                   href="/contact"
                   className="bg-[#232F3E] text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-[#1a242e] transition-all shadow-xl"

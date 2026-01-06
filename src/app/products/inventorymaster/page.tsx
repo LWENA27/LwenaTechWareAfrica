@@ -175,11 +175,11 @@ export default function InventoryMasterPage() {
               Ready to Streamline Your Inventory?
             </h2>
             <p className="text-lg text-white/80 mb-8">
-              Start using InventoryMaster today with our free trial. No credit card required.
+              Start using InventoryMaster today. Contact us for licensing options.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
-                <Link href="/register">Start Free Trial</Link>
+                <Link href="/contact">Contact Us</Link>
               </Button>
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary" asChild>
                 <a href="https://github.com/LWENA27/Mem_technology" target="_blank" rel="noopener noreferrer">

@@ -19,15 +19,15 @@ export function CTASection() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-lg md:text-xl text-white/80 mb-8">
-            Join thousands of businesses using our products. Start your free trial today 
+            Join thousands of businesses using our products. Try SMS Gateway Pro free 
             and experience world-class software solutions built in Africa.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button variant="cta" size="lg" asChild>
-              <Link href="/register">
-                Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              <a href="https://smsgetway.techwareafrica.tech" target="_blank" rel="noopener noreferrer">
+                Try SMS Gateway Free <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
             <Button 
               variant="outline" 

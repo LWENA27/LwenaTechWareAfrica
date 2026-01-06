@@ -58,7 +58,9 @@ export function Header() {
         {/* CTA Button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Button variant="cta" asChild>
-            <Link href="/register">Start Free Trial</Link>
+            <a href="https://smsgetway.techwareafrica.tech" target="_blank" rel="noopener noreferrer">
+              Try SMS Gateway
+            </a>
           </Button>
         </div>
 
@@ -98,9 +100,14 @@ export function Header() {
                   </div>
                   <div className="py-6">
                     <Button variant="cta" className="w-full" asChild>
-                      <Link href="/register" onClick={() => setMobileMenuOpen(false)}>
-                        Start Free Trial
-                      </Link>
+                      <a 
+                        href="https://smsgetway.techwareafrica.tech" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Try SMS Gateway
+                      </a>
                     </Button>
                   </div>
                 </div>

@@ -69,9 +69,14 @@ export default function Page({ params }: { params: { slug: string } }) {
           </ul>
 
           <div className="flex gap-3">
-            <Link href="/register" className="btn btn-primary">
-              Start Free Trial
-            </Link>
+            <a 
+              href="https://smsgetway.techwareafrica.tech" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Try SMS Gateway
+            </a>
             <Link href="/services" className="btn btn-ghost">
               All Services
             </Link>
