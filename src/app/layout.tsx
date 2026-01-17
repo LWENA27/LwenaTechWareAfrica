@@ -19,8 +19,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Lwena TechWareAfrica | World-Class Software Solutions from Africa',
-    template: '%s | Lwena TechWareAfrica'
+    default: 'TechWareAfrica | World-Class Software Solutions from Africa',
+    template: '%s | TechWareAfrica'
   },
   description: 'Professional software development company delivering world-class SaaS solutions, mobile apps, and enterprise systems. Built in Africa for the global market.',
   keywords: [
@@ -33,22 +33,30 @@ export const metadata: Metadata = {
     'SMS gateway',
     'restaurant management system',
   ],
-  authors: [{ name: 'Lwena TechWareAfrica' }],
-  creator: 'Lwena TechWareAfrica',
-  publisher: 'Lwena TechWareAfrica',
-  metadataBase: new URL('https://lwenatech.com'),
+  authors: [{ name: 'TechWareAfrica' }],
+  creator: 'TechWareAfrica',
+  publisher: 'TechWareAfrica',
+  // canonical site base used to build absolute URLs (keeps Open Graph and canonical links consistent)
+  metadataBase: new URL('https://techwareafrica.tech'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://lwenatech.com',
-    title: 'Lwena TechWareAfrica | World-Class Software Solutions from Africa',
+    url: 'https://techwareafrica.tech',
+    title: 'TechWareAfrica | World-Class Software Solutions from Africa',
     description: 'Professional software development company delivering world-class solutions built in Africa for the global market.',
-    siteName: 'Lwena TechWareAfrica',
+    siteName: 'TechWareAfrica',
+    images: [
+      '/images/Brand&LandingPage/og-techwareafrica.png'
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lwena TechWareAfrica | World-Class Software Solutions',
+    title: 'TechWareAfrica | World-Class Software Solutions',
     description: 'Professional software development company from Africa.',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
   },
   robots: {
     index: true,
@@ -63,6 +71,16 @@ export const metadata: Metadata = {
   },
 }
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TechWareAfrica",
+  "url": "https://techwareafrica.tech",
+  "logo": "https://techwareafrica/images/Brand&LandingPage/logoal-removebg-preview.png",
+  "description": "Professional software development company delivering world-class SaaS solutions, mobile apps, and enterprise systems.",
+  "sameAs": []
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -70,6 +88,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
         <Header />
         <main className="min-h-screen">

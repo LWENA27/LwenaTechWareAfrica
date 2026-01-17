@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lwenatech.com/sitemap.xml
+Sitemap: https://techwareafrica.tech/sitemap.xml

@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, TrendingUp } from 'lucide-react'
+import { BrandLogo } from '@/components/ui/BrandLogo'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -10,8 +11,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold font-heading mb-4">
-              Lwena <span className="text-secondary">TechWareAfrica</span>
+            <h3 className="mb-4">
+              <BrandLogo variant="footer" />
             </h3>
             <p className="text-sm text-white/80 mb-4">
               World-class software solutions built in Africa for the global market. 
@@ -19,16 +20,19 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a href="https://github.com/LWENA27" target="_blank" rel="noopener noreferrer" 
-                 className="text-white/80 hover:text-secondary transition-colors">
+                 className="text-white/80 hover:text-secondary transition-colors" title="GitHub">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/in/lwena-adam-b55944322/" className="text-white/80 hover:text-secondary transition-colors">
+              <a href="https://www.linkedin.com/in/lwena-adam-b55944322/" target="_blank" rel="noopener noreferrer"
+                 className="text-white/80 hover:text-secondary transition-colors" title="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/80 hover:text-secondary transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="https://www.tiktok.com/@techwareafrica" target="_blank" rel="noopener noreferrer"
+                 className="text-white/80 hover:text-secondary transition-colors" title="TikTok @techwareafrica">
+                <TrendingUp className="h-5 w-5" />
               </a>
             </div>
+            <p className="text-xs text-white/60 mt-3">Follow us: @techwareafrica</p>
           </div>
 
           {/* Quick Links */}
@@ -84,7 +88,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
-            <p>&copy; {currentYear} Lwena TechWareAfrica. All rights reserved.</p>
+            <p>&copy; {currentYear} TechWareAfrica. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-secondary transition-colors">Terms of Service</Link>

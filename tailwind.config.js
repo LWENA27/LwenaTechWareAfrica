@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        // Lwena TechWareAfrica Brand Colors (AWS-inspired)
+        // techwareafrica Brand Colors (AWS-inspired)
         primary: {
           DEFAULT: "#232F3E", // AWS Dark Blue
           foreground: "#FFFFFF",

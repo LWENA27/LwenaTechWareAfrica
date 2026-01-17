@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 
@@ -11,10 +12,13 @@ export function SupportTeam() {
             {/* Image */}
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img
+                <Image
                   src="/images/Brand&LandingPage/SupportTeam.png"
-                  alt="Meet Our Support Team"
+                  alt="TechWareAfrica support team - dedicated professionals ready to help"
+                  width={600}
+                  height={400}
                   className="w-full h-auto object-cover"
+                  priority
                 />
               </div>
             </div>

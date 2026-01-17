@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Lwena TechWareAfrica Website - Quick Setup Script
+# techwareafrica Website - Quick Setup Script
 # This script will install dependencies and start the development server
 
-echo "🚀 Lwena TechWareAfrica Website Setup"
+echo "🚀 techwareafrica Website Setup"
 echo "======================================"
 echo ""
 

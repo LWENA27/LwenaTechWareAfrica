@@ -1,8 +1,8 @@
-# LwenaTech InventoryMaster SaaS 📦
+# techwareafrica InventoryMaster SaaS 📦
 
-A comprehensive multi-tenant inventory management system built with Flutter and Supabase, provided by LwenaTech.
+A comprehensive multi-tenant inventory management system built with Flutter and Supabase, provided by techwareafrica.
 
-Website | GitHub | Support: lwenatech@gmail.com
+Website | GitHub | Support: techwareafrica@gmail.com
 
 ## 🌟 Features
 
@@ -126,7 +126,7 @@ This triggers multi-platform builds and creates downloadable installers for:
 
 ### 🖥️ Windows Desktop
 - **Download**: ZIP package from releases
-- **Installation**: Extract and run `lwenatech.exe`
+- **Installation**: Extract and run `techwareafrica.exe`
 - **Requirements**: Windows 10/11 (64-bit), 4GB RAM, 1GB storage
 
 ### 🍎 macOS Desktop
@@ -252,7 +252,7 @@ flutter build web
 ### Get Help
 - 📖 [Documentation](DEPLOYMENT_GUIDE.md)
 - 🐛 [GitHub Issues](https://github.com/LWENA27/Mem_technology/issues)
--- 📧 Email: support@lwenatech.com
+-- 📧 Email: support@techwareafrica.tech
 
 ## 🤝 Contributing
 

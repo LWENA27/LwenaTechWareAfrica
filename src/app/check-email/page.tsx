@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Mail, CheckCircle, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Check Your Email - Lwena TechWareAfrica",
+  title: "Check Your Email - TechWareAfrica",
   description: "Please verify your email address to complete registration",
 };
 

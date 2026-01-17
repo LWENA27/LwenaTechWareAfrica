@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#EAEDED" />
+  <g fill="#232F3E" font-family="Poppins, system-ui, Arial, Helvetica" text-anchor="middle">
+    <text x="600" y="240" font-size="48" font-weight="700">About TechWareAfrica</text>
+    <text x="600" y="310" font-size="24" opacity="0.9">Our mission, vision, and the team building software from Africa</text>
+    <circle cx="600" cy="420" r="64" fill="#FF9900" opacity="0.95" />
+  </g>
+</svg>

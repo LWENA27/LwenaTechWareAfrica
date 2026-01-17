@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#232F3E"/>
+      <stop offset="1" stop-color="#FF9900"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)" />
+  <g fill="#fff" font-family="Poppins, system-ui, Arial, Helvetica" text-anchor="middle">
+    <text x="600" y="230" font-size="58" font-weight="700">TechWareAfrica</text>
+    <text x="600" y="310" font-size="36" opacity="0.95">World-class software solutions built in Africa</text>
+    <rect x="400" y="360" width="400" height="8" rx="4" fill="#fff" opacity="0.18" />
+    <text x="600" y="420" font-size="26" opacity="0.9">Inventory • SMS Gateway • SmartMenu QR • Weather Admin</text>
+  </g>
+</svg>

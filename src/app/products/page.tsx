@@ -5,6 +5,11 @@ import { Package, ArrowRight, CheckCircle2 } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Products',
   description: 'Explore our suite of production-ready software solutions designed for modern businesses.',
+  openGraph: {
+    title: 'Products — TechWareAfrica',
+    description: 'Explore our production-ready products: InventoryMaster, SmartMenu QR, Weather Admin, and SMS Gateway Pro.',
+    images: ['/images/og/og-products-1200x630.png']
+  },
 }
 
 export default function ProductsPage() {

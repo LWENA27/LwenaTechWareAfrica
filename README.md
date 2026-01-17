@@ -1,4 +1,4 @@
-# Lwena TechWareAfrica Website
+# TechWareAfrica Website
 
 **World-Class Software Solutions from Africa**
 
@@ -195,8 +195,8 @@ This is a private company website. For internal development:
 
 ## 📧 Contact
 
-**Lwena TechWareAfrica**
-- Email: lwenatech@gmail.com
+**techwareafrica**
+- Email: techwareafrican@gmail.com
 - GitHub: [@LWENA27](https://github.com/LWENA27)
 - Location: Dar es Salaam, Tanzania
 
@@ -204,7 +204,7 @@ This is a private company website. For internal development:
 
 ## 📄 License
 
-© 2025 Lwena TechWareAfrica. All rights reserved.
+© 2025 techwareafrica. All rights reserved.
 
 ---
 

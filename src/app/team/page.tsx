@@ -18,7 +18,7 @@ export default function TeamPage() {
         { day: 'Weekend', hours: 'By appointment' },
       ],
       email: 'lwena027@gmail.com',
-      whatsapp: '+255623586879',
+      whatsapp: '+255678364343',
       portfolio: 'lwena.techwareafrica.tech',
       specialties: ['Full Stack Development', 'System Architecture', 'Project Management', 'SaaS Design'],
     },

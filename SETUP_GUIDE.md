@@ -1,4 +1,4 @@
-# 🚀 SETUP GUIDE - Lwena TechWareAfrica Website
+# 🚀 SETUP GUIDE - techwareafrica Website
 
 ## Quick Start (5 minutes)
 
@@ -122,7 +122,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Lwena TechWareAfrica...',
+  description: 'Learn about techwareafrica...',
 }
 
 export default function AboutPage() {
@@ -242,7 +242,7 @@ rm -rf .next
 
 ## 📧 Need Help?
 
-Contact: **lwenatech@gmail.com**
+Contact: **techwareafrica@gmail.com**
 
 ---
 

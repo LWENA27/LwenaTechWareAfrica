@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Comprehensive software development and technology services from Lwena TechWareAfrica.',
+  description: 'Comprehensive software development and technology services from TechWareAfrica.',
 }
 
 export default function ServicesPage() {

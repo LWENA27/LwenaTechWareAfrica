@@ -1,9 +1,14 @@
 import { Metadata } from 'next'
-import { Building2, Users, Target, Zap } from 'lucide-react'
+import { Building2, Users, Target, Zap, Github, Linkedin, TrendingUp } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Lwena TechWareAfrica - World-class software solutions built in Africa for the global market.',
+  description: 'Learn about TechWareAfrica - World-class software solutions built in Africa for the global market.',
+  openGraph: {
+    title: 'About TechWareAfrica',
+    description: 'Learn about our mission, vision, and the team behind TechWareAfrica — building world-class software from Africa.',
+    images: ['/images/og/og-about-1200x630.png']
+  },
 }
 
 export default function AboutPage() {
@@ -14,7 +19,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About Lwena TechWareAfrica
+              About TechWareAfrica
             </h1>
             <p className="text-xl text-gray-300">
               We are a world-class software company built in Africa, delivering enterprise-grade solutions to clients worldwide.
@@ -63,7 +68,7 @@ export default function AboutPage() {
             
             <div className="bg-white p-8 rounded-lg shadow-sm space-y-6 text-gray-600 leading-relaxed">
               <p>
-                Lwena TechWareAfrica was founded with a simple yet powerful vision: to prove that world-class 
+                 TechWareAfrica was founded with a simple yet powerful vision: to prove that world-class 
                 software can be built anywhere, including right here in Africa.
               </p>
               
@@ -140,7 +145,7 @@ export default function AboutPage() {
             <Users className="w-16 h-16 text-[#FF9900] mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-[#232F3E] mb-4">Meet Our Team</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              The passionate people behind Lwena TechWareAfrica's success
+              The passionate people behind TechWareAfrica's success
             </p>
           </div>
           
@@ -154,7 +159,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-[#232F3E] mb-1">Lwena</h3>
+                <h3 className="text-xl font-bold text-[#232F3E] mb-1">Lwena Adam</h3>
                 <p className="text-[#FF9900] font-semibold mb-3">CEO & Software Developer</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Founder and lead developer, passionate about building world-class software solutions 
@@ -163,34 +168,64 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Placeholder for future team members */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm border-2 border-dashed border-gray-300">
-              <div className="bg-gray-100 h-48 flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                  <Users className="w-12 h-12 mx-auto mb-2 opacity-50" />
-                  <p className="text-sm">Team Member</p>
-                  <p className="text-xs">Coming Soon</p>
+            {/* Fathiya Seif Mohammed */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+              <div className="bg-gradient-to-br from-[#FF9900] to-[#232F3E] h-48 flex items-center justify-center">
+                <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                  <Users className="w-16 h-16 text-[#FF9900]" />
                 </div>
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-lg font-semibold text-gray-400 mb-1">Your Name</h3>
-                <p className="text-gray-400 text-sm mb-3">Position Title</p>
-                <p className="text-gray-400 text-sm">Join our growing team</p>
+                <h3 className="text-xl font-bold text-[#232F3E] mb-1">Fathiya Seif Mohammed</h3>
+                <p className="text-[#FF9900] font-semibold mb-3">Designer, Help Desk & Database Admin</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Multi-talented team member specializing in UI/UX design, customer support, and database management. 
+                  Passionate about creating beautiful interfaces and maintaining robust systems.
+                </p>
+                <div className="flex justify-center gap-3">
+                  <a
+                    href="https://github.com/Fathiya123"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1 bg-[#232F3E] text-white text-xs rounded hover:bg-[#FF9900] transition-colors"
+                    title="GitHub"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/fathiya-seif-a3401b379/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1 bg-[#232F3E] text-white text-xs rounded hover:bg-[#FF9900] transition-colors"
+                    title="LinkedIn"
+                  >
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm border-2 border-dashed border-gray-300">
-              <div className="bg-gray-100 h-48 flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                  <Users className="w-12 h-12 mx-auto mb-2 opacity-50" />
-                  <p className="text-sm">Team Member</p>
-                  <p className="text-xs">Coming Soon</p>
+            {/* Join Our Team */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm border-2 border-dashed border-[#FF9900]">
+              <div className="bg-gradient-to-br from-[#EAEDED] to-[#F5F5F5] h-48 flex items-center justify-center">
+                <div className="text-center text-[#232F3E]">
+                  <Users className="w-12 h-12 mx-auto mb-2 opacity-70" />
+                  <p className="text-sm font-semibold">Join Our Team</p>
+                  <p className="text-xs text-gray-600">We're Hiring</p>
                 </div>
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-lg font-semibold text-gray-400 mb-1">Your Name</h3>
-                <p className="text-gray-400 text-sm mb-3">Position Title</p>
-                <p className="text-gray-400 text-sm">Join our growing team</p>
+                <h3 className="text-lg font-semibold text-[#232F3E] mb-1">Become Part of Our Journey</h3>
+                <p className="text-[#FF9900] text-sm mb-3 font-medium">Available Positions</p>
+                <p className="text-gray-600 text-sm mb-4">
+                  We're looking for talented developers, designers, and support specialists to join our growing team.
+                </p>
+                <a
+                  href="/contact"
+                  className="inline-block px-4 py-2 bg-[#FF9900] text-white text-sm rounded font-semibold hover:bg-[#232F3E] transition-colors"
+                >
+                  Get in Touch
+                </a>
               </div>
             </div>
           </div>
@@ -232,6 +267,43 @@ export default function AboutPage() {
           >
             Get in Touch
           </a>
+
+          {/* Social Media Links */}
+          <div className="mt-12 pt-8 border-t border-white/30">
+            <p className="text-sm font-medium mb-4">Follow us on social media @techwareafrica</p>
+            <div className="flex justify-center gap-3">
+              <a
+                href="https://www.tiktok.com/@techwareafrica"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors text-sm font-medium"
+                title="TikTok @techwareafrica"
+              >
+                <TrendingUp className="h-4 w-4" />
+                <span>TikTok</span>
+              </a>
+              <a
+                href="https://github.com/LWENA27"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors text-sm font-medium"
+                title="GitHub"
+              >
+                <Github className="h-4 w-4" />
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/lwena-adam-b55944322/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors text-sm font-medium"
+                title="LinkedIn"
+              >
+                <Linkedin className="h-4 w-4" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>

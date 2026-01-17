@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
-import { Mail, Phone, MapPin, Clock } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, Github, Linkedin, TrendingUp } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Lwena TechWareAfrica. We\'re here to help with your software needs.',
+  description: 'Get in touch with TechWareAfrica. We\'re here to help with your software needs.',
 }
 
 export default function ContactPage() {
@@ -144,7 +144,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#232F3E] mb-1">Email</h3>
-                    <p className="text-gray-600">lwenatech@gmail.com</p>
+                    <p className="text-gray-600">techwareafrica@gmail.com</p>
                   </div>
                 </div>
 
@@ -184,28 +184,38 @@ export default function ContactPage() {
 
               {/* Social Links */}
               <div className="bg-[#EAEDED] p-6 rounded-lg">
-                <h3 className="font-semibold text-[#232F3E] mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
+                <h3 className="font-semibold text-[#232F3E] mb-4">Meet Us on Social Media</h3>
+                <p className="text-sm text-gray-600 mb-4">Follow us on all platforms @techwareafrica</p>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="https://www.tiktok.com/@techwareafrica"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#232F3E] text-white rounded-lg hover:bg-[#FF9900] transition-colors text-sm font-medium"
+                    title="TikTok @techwareafrica"
+                  >
+                    <TrendingUp className="h-4 w-4" />
+                    <span>TikTok</span>
+                  </a>
+                  <a
+                    href="https://github.com/LWENA27"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#232F3E] text-white rounded-lg hover:bg-[#FF9900] transition-colors text-sm font-medium"
+                    title="GitHub"
+                  >
+                    <Github className="h-4 w-4" />
+                    <span>GitHub</span>
+                  </a>
                   <a
                     href="https://www.linkedin.com/in/lwena-adam-b55944322/"
-                    className="w-10 h-10 bg-[#232F3E] rounded-lg flex items-center justify-center hover:bg-[#FF9900] transition-colors"
-                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#232F3E] text-white rounded-lg hover:bg-[#FF9900] transition-colors text-sm font-medium"
+                    title="LinkedIn"
                   >
-                    <span className="text-white text-sm font-bold">in</span>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 bg-[#232F3E] rounded-lg flex items-center justify-center hover:bg-[#FF9900] transition-colors"
-                    aria-label="GitHub"
-                  >
-                    <span className="text-white text-sm font-bold">GH</span>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 bg-[#232F3E] rounded-lg flex items-center justify-center hover:bg-[#FF9900] transition-colors"
-                    aria-label="Twitter"
-                  >
-                    <span className="text-white text-sm font-bold">𝕏</span>
+                    <Linkedin className="h-4 w-4" />
+                    <span>LinkedIn</span>
                   </a>
                 </div>
               </div>

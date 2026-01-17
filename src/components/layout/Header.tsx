@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { BrandLogo } from '@/components/ui/BrandLogo'
 import { Menu, X } from 'lucide-react'
 
 export function Header() {
@@ -24,9 +25,7 @@ export function Header() {
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-xl font-bold text-white font-heading">
-              Lwena <span className="text-secondary">TechWareAfrica</span>
-            </span>
+            <BrandLogo />
           </Link>
         </div>
 
@@ -71,9 +70,7 @@ export function Header() {
             <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-primary px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
               <div className="flex items-center justify-between">
                 <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                  <span className="text-xl font-bold text-white font-heading">
-                    Lwena <span className="text-secondary">Tech</span>
-                  </span>
+                  <BrandLogo />
                 </Link>
                 <button
                   type="button"

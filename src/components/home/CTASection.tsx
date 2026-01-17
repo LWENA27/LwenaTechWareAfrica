@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Mail } from 'lucide-react'
+import { ArrowRight, Mail, TrendingUp, Github, Linkedin } from 'lucide-react'
 
 export function CTASection() {
   return (
@@ -35,7 +35,7 @@ export function CTASection() {
               className="border-white text-white hover:bg-white hover:text-primary"
               asChild
             >
-              <Link href="mailto:lwenatech@gmail.com">
+              <Link href="mailto:techwareafrica@gmail.com">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </Link>
@@ -45,6 +45,43 @@ export function CTASection() {
           <p className="text-sm text-white/60">
             💬 Prefer to chat? <a href="https://wa.me/255623586879" target="_blank" rel="noopener noreferrer" className="text-secondary underline hover:no-underline">WhatsApp us</a> for instant response
           </p>
+
+          {/* Social Media Section */}
+          <div className="mt-12 pt-8 border-t border-white/20">
+            <p className="text-sm font-medium mb-4">Meet us on all social media platforms</p>
+            <div className="flex justify-center gap-6">
+              <a 
+                href="https://www.tiktok.com/@techwareafrica" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors text-sm font-medium"
+                title="TikTok @techwareafrica"
+              >
+                <TrendingUp className="h-4 w-4" />
+                <span>@techwareafrica</span>
+              </a>
+              <a 
+                href="https://github.com/LWENA27" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors text-sm font-medium"
+                title="GitHub"
+              >
+                <Github className="h-4 w-4" />
+                <span>GitHub</span>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/lwena-adam-b55944322/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors text-sm font-medium"
+                title="LinkedIn"
+              >
+                <Linkedin className="h-4 w-4" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

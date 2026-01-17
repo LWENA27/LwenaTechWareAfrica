@@ -3,7 +3,12 @@ import { BookOpen } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Insights, tutorials, and updates from the Lwena TechWareAfrica team.',
+  description: 'Insights, tutorials, and updates from the TechWareAfrica team.',
+  openGraph: {
+    title: 'Blog & Insights — TechWareAfrica',
+    description: 'Technical insights, industry trends, and company updates from TechWareAfrica.',
+    images: ['/images/og/og-blog-1200x630.png']
+  },
 }
 
 export default function BlogPage() {

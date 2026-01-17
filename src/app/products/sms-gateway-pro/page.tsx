@@ -1,11 +1,43 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Check, Clock, Gift, Zap, Shield, Globe, Users, MessageSquare } from "lucide-react";
 import { PlaceholderImage } from "../../../components/ui/PlaceholderImage";
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "SMS Gateway Pro",
+  "description": "Enterprise bulk SMS platform for campaigns, notifications, and two-way messaging.",
+  "image": "https://techwareafrica.tech/images/sms/sms-01.jpg",
+  "brand": {
+    "@type": "Brand",
+    "name": "TechWareAfrica"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://smsgetway.techwareafrica.tech",
+    "priceCurrency": "USD",
+    "price": "0",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
+    "description": "3 months free trial in 2026"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1"
+  }
+}
 
 export const metadata = {
   title: "SMS Gateway Pro - 3 Months FREE Trial | 2026 Exclusive Offer",
   description: "Professional bulk SMS management platform. Sign up now for 3 months completely FREE throughout 2026 - No credit card required!",
+  openGraph: {
+    title: 'SMS Gateway Pro — Bulk SMS & Communication Platform',
+    description: 'Enterprise SMS platform with campaign tools, two-way messaging, and delivery reports.',
+    images: ['/images/sms/sms-01.jpg']
+  },
 };
 
 export default function smsgetwayProPage() {
@@ -16,6 +48,11 @@ export default function smsgetwayProPage() {
 
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       {/* Hero Section with Offer Banner */}
       <section className="relative bg-gradient-to-br from-[#232F3E] via-[#1a242e] to-[#0f1419] text-white py-20 overflow-hidden">
         {/* Animated background elements */}
@@ -290,13 +327,16 @@ export default function smsgetwayProPage() {
           <div className="max-w-7xl mx-auto">
             {/* Featured Screenshot */}
             <div className="mb-12 flex justify-center">
-              <div className="relative group max-w-md">
+              <div className="relative group max-w-md w-full">
                 <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
                 <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
-                  <img 
-                    src="/images/sms/Screenshot_20260101-101212.jpg"
-                    alt="SMS Gateway Pro - Main Dashboard"
+                  <Image 
+                    src="/images/sms/sms-01.jpg"
+                    alt="SMS Gateway Pro - Main Dashboard with contact list and messaging interface"
+                    width={600}
+                    height={800}
                     className="w-full h-auto rounded-xl"
+                    priority
                   />
                 </div>
               </div>
@@ -305,24 +345,26 @@ export default function smsgetwayProPage() {
             {/* Screenshot Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {[
-                { src: "/images/sms/Screenshot_20260101-101230.jpg", alt: "Contact Management" },
-                { src: "/images/sms/Screenshot_20260101-101343.jpg", alt: "SMS Composer" },
-                { src: "/images/sms/Screenshot_20260101-101349.jpg", alt: "Group Messaging" },
-                { src: "/images/sms/Screenshot_20260101-101438.jpg", alt: "Message Templates" },
-                { src: "/images/sms/Screenshot_20260101-101446.jpg", alt: "Delivery Reports" },
-                { src: "/images/sms/Screenshot_20260101-101543.jpg", alt: "Settings Panel" },
-                { src: "/images/sms/Screenshot_20260101-101553.jpg", alt: "API Integration" },
-                { src: "/images/sms/Screenshot_20260101-101558.jpg", alt: "Bulk Send" },
-                { src: "/images/sms/Screenshot_20260101-101657.jpg", alt: "Contact Groups" },
-                { src: "/images/sms/Screenshot_20260101-101706.jpg", alt: "Campaign Analytics" },
-                { src: "/images/sms/Screenshot_20260101-101732.jpg", alt: "User Profile" },
-                { src: "/images/sms/Screenshot_20260101-101741.jpg", alt: "Team Management" }
+                { src: "/images/sms/sms-02.jpg", alt: "Contact Management - Organize and manage contacts" },
+                { src: "/images/sms/sms-03.jpg", alt: "SMS Composer - Write and format messages" },
+                { src: "/images/sms/sms-04.jpg", alt: "Group Messaging - Send to groups at once" },
+                { src: "/images/sms/sms-05.jpg", alt: "Message Templates - Reusable templates" },
+                { src: "/images/sms/sms-06.jpg", alt: "Delivery Reports - Track message status" },
+                { src: "/images/sms/sms-07.jpg", alt: "Settings Panel - Configure preferences" },
+                { src: "/images/sms/sms-08.jpg", alt: "API Integration - Developer tools" },
+                { src: "/images/sms/sms-09.jpg", alt: "Bulk Send - Send to many contacts" },
+                { src: "/images/sms/sms-10.jpg", alt: "Contact Groups - Organize contacts" },
+                { src: "/images/sms/sms-11.jpg", alt: "Campaign Analytics - View results" },
+                { src: "/images/sms/sms-12.jpg", alt: "User Profile - Account settings" },
+                { src: "/images/sms/sms-13.jpg", alt: "Team Management - Manage users" }
               ].map((screenshot, index) => (
                 <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <img 
+                  <Image 
                     src={screenshot.src}
                     alt={screenshot.alt}
-                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={533}
+                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-4">

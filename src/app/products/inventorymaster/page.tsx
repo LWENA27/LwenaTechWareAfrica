@@ -1,11 +1,43 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft, CheckCircle2, Download, Globe, Smartphone, Monitor, Gift, Clock, Check, Zap } from 'lucide-react'
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "InventoryMaster SaaS",
+  "description": "Comprehensive multi-tenant inventory management system built with Flutter and Supabase.",
+  "image": "https://techwareafrica.tech/images/inventory/inventory-01.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "TechWareAfrica"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://inventory.techwareafrica.tech",
+    "priceCurrency": "USD",
+    "price": "0",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
+    "description": "3 months free trial in 2026"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1"
+  }
+}
 
 export const metadata: Metadata = {
   title: 'InventoryMaster SaaS - Multi-Platform Inventory Management',
   description: 'Comprehensive multi-tenant inventory management system built with Flutter and Supabase. Supports Web, Android, Windows, macOS, and Linux.',
+  openGraph: {
+    title: 'InventoryMaster — Multi-Platform Inventory Management',
+    description: 'InventoryMaster is a comprehensive multi-tenant inventory management system supporting web and native platforms.',
+    images: ['/images/inventory/inventory-01.png']
+  },
 }
 
 export default function InventoryMasterPage() {
@@ -43,6 +75,11 @@ export default function InventoryMasterPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       {/* Hero Section */}
       <section className="bg-primary text-white py-20">
         <div className="container mx-auto px-4">
@@ -205,13 +242,16 @@ export default function InventoryMasterPage() {
           <div className="max-w-7xl mx-auto">
             {/* Featured Screenshot */}
             <div className="mb-12 flex justify-center">
-              <div className="relative group max-w-4xl">
+              <div className="relative group max-w-4xl w-full">
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
                 <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
-                  <img 
-                    src="/images/inventory/Screenshot from 2026-01-07 00-05-54.png"
-                    alt="InventoryMaster - Main Dashboard"
+                  <Image 
+                    src="/images/inventory/inventory-01.png"
+                    alt="InventoryMaster - Main Dashboard showing multi-tenant inventory management"
+                    width={1200}
+                    height={675}
                     className="w-full h-auto rounded-xl"
+                    priority
                   />
                 </div>
               </div>
@@ -220,24 +260,26 @@ export default function InventoryMasterPage() {
             {/* Screenshot Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {[
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-21-56.png", alt: "Product Management" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-22-06.png", alt: "Inventory Dashboard" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-22-15.png", alt: "Stock Levels" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-22-38.png", alt: "Product Details" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-23-07.png", alt: "Sales Tracking" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-23-33.png", alt: "Category Management" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-23-41.png", alt: "User Settings" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-25-15.png", alt: "Multi-tenant View" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-27-48.png", alt: "Reports & Analytics" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 00-31-12.png", alt: "Image Gallery" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 01-00-16.png", alt: "Real-time Sync" },
-                { src: "/images/inventory/Screenshot from 2026-01-07 01-06-25.png", alt: "Offline Support" }
+                { src: "/images/inventory/inventory-02.png", alt: "Product Management - Add and edit inventory items" },
+                { src: "/images/inventory/inventory-03.png", alt: "Inventory Dashboard - Real-time stock overview" },
+                { src: "/images/inventory/inventory-04.png", alt: "Stock Levels - Monitor inventory quantities" },
+                { src: "/images/inventory/inventory-05.png", alt: "Product Details - Complete item information" },
+                { src: "/images/inventory/inventory-06.png", alt: "Sales Tracking - Transaction history" },
+                { src: "/images/inventory/inventory-07.png", alt: "Category Management - Organize products" },
+                { src: "/images/inventory/inventory-08.png", alt: "User Settings - Account configuration" },
+                { src: "/images/inventory/inventory-09.png", alt: "Multi-tenant View - Manage multiple businesses" },
+                { src: "/images/inventory/inventory-10.png", alt: "Reports & Analytics - Data insights" },
+                { src: "/images/inventory/inventory-11.png", alt: "Image Gallery - Product photography" },
+                { src: "/images/inventory/inventory-12.png", alt: "Real-time Sync - Cross-platform updates" },
+                { src: "/images/inventory/inventory-13.png", alt: "Offline Support - Work without connection" }
               ].map((screenshot, index) => (
                 <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <img 
+                  <Image 
                     src={screenshot.src}
                     alt={screenshot.alt}
-                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-4">
